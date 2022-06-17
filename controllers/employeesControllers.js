@@ -24,12 +24,15 @@ const createEmployees = async (req, res, next) => {
         console.log(error);
     }
 
-    data.push(result.name),
+    data.push(result);
         res.send(data)
     next();
 }
 
 const updateEmployees = (req, res, next) => {
+    const employee = data.filter(employee => employee.id === req.body.id)
+
+    
     res.json()
      next();
 }

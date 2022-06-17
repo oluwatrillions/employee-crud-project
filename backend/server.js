@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/employees', require('../routes/employeeRoutes'))
+app.use('/register', require('../routes/registerRoute'))
 
 mongoose.connection.once('open', () => {
     console.log('we are connected');

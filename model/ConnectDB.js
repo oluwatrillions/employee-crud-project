@@ -6,8 +6,9 @@ const DBconnect = async() => {
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
+        console.log('up and running');
     } catch (error) {
-        console.log(error.message);
+        console.error(error);
     }
 }
     
