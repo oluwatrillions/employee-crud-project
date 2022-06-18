@@ -6,11 +6,14 @@ const DBconnect = async() => {
             useUnifiedTopology: true,
             useNewUrlParser: true
         });
-        console.log('up and running');
     } catch (error) {
         console.error(error);
     }
 }
+
+mongoose.connection.once('open', () => {
+    console.log('we are connected');
+})
     
 
 module.exports = DBconnect

@@ -18,11 +18,6 @@ app.use(cors());
 app.use('/employees', require('../routes/employeeRoutes'))
 app.use('/register', require('../routes/registerRoute'))
 
-mongoose.connection.once('open', () => {
-    console.log('we are connected');
-
-})
-
 app.listen(process.env.PORT, (req, res) => {
     console.log(`server is running on port ${process.env.PORT}`);
 })

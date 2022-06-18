@@ -6,11 +6,12 @@ const controllers = require('../controllers/employeesControllers')
 router.route('/')
     .get(controllers.getEmployees)
     .post(controllers.createEmployees)
-    .put(controllers.updateEmployees)
-    .delete(controllers.deleteEmployees)
+   
 
 
 router.route('./:id')
+    .put(controllers.updateEmployees)
+    .delete(controllers.deleteEmployees)
     .get(controllers.getEmployee)
 
 module.exports = router;
