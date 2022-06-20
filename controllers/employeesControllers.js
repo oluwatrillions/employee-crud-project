@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const Users = require('../model/EmployeesSchema')
 
 const getEmployees = async (req, res) => {
@@ -23,8 +22,8 @@ const createEmployees = async (req, res) => {
             username: req.body.username,
             password: req.body.password
         })
-        return res.status(200).json({'success': `${username} has been created`})
-        console.log(newUser);
+        return res.status(201).json(newUser)
+
     } catch (error) {
         console.log(error.message);
     }

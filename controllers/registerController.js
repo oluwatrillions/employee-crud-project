@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const NewUser = require('../model/RegisterSchema')
 
 const registerNewUser = async (req, res) => {
