@@ -9,7 +9,7 @@ router.route('/')
    
 
 
-router.route('./:id')
+router.route('/:id')
     .put(controllers.updateEmployees)
     .delete(controllers.deleteEmployees)
     .get(controllers.getEmployee)

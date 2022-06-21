@@ -1,4 +1,5 @@
 const NewUser = require('../model/RegisterSchema')
+const bcrypt = require('bcrypt')
 
 const registerNewUser = async (req, res) => {
     const { user, password } = req.body;
@@ -11,10 +12,12 @@ const registerNewUser = async (req, res) => {
     if (duplicate)
         return res.sendStatus(409);
     
+    const hashedPwd = await bcrypt.hash(password, 12)
+    
     try {
         const createdUser = await NewUser.create({
             "username": user,
-            "password": password
+            "password": hashedPwd
         });
 
         console.log(createdUser);
@@ -23,8 +26,7 @@ const registerNewUser = async (req, res) => {
         
     } catch (error) {
         res.status(500).json({'message': error.message})
-    }
-   
+    } 
 }
 
 

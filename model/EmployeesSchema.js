@@ -9,7 +9,10 @@ const employeeSchema = new Schema({
     },
     password: {
         type: String,
-        required: true
+        required: true,
+    },
+    email: {
+        type: String
     }
 });
 
