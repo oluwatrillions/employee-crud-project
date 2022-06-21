@@ -4,7 +4,7 @@ const auth = require('../controllers/authController')
 
 
 router.route('/')
-    .get(auth.verifyAuth)
+    .post(auth.verifyAuth)
         
 
     module.exports = router
