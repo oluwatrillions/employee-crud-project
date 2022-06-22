@@ -3,8 +3,7 @@ const router = express.Router()
 const auth = require('../controllers/authController')
 
 
-router.route('/')
-    .post(auth.verifyAuth)
+router.post('/', auth.verifyAuth)
         
 
     module.exports = router

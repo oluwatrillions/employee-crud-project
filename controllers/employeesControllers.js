@@ -39,9 +39,9 @@ const updateEmployees = async (req, res) => {
     
     try {
         const editedEmployee = await Users.findOne({ _id: req.params.id }).exec()
-            editedEmployee.username = req.body.username;
-            editedEmployee.password = req.body.password;
-            editedEmployee.email = req.body.email;
+              editedEmployee.username = req.body.username;
+              editedEmployee.password = req.body.password;
+              editedEmployee.email = req.body.email;
         const result = await editedEmployee.save();
         res.json(result)
     } catch (error) {
