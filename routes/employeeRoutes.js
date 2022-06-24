@@ -1,10 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const controllers = require('../controllers/employeesControllers')
-const jwtAuth = require('../middleware/verifyJWT')
 
 router.route('/')
-    .get(jwtAuth, controllers.getEmployees)
+    .get(controllers.getEmployees)
     .post(controllers.createEmployees)
    
 

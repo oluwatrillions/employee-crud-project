@@ -2,12 +2,12 @@ const NewUser = require('../model/RegisterSchema')
 const bcrypt = require('bcrypt')
 
 const registerNewUser = async (req, res) => {
-    const { user, password } = req.body;
+    const { username, password } = req.body;
     
-    if (!user || !password)
+    if (!username || !password)
         return res.status(400).json({ 'message': 'Invalid username, email or password' });
     
-    const duplicate = await NewUser.findOne({ username: user }).exec()
+    const duplicate = await NewUser.findOne({ username }).exec()
 
     if (duplicate)
         return res.sendStatus(409);
@@ -16,13 +16,13 @@ const registerNewUser = async (req, res) => {
     
     try {
         const createdUser = await NewUser.create({
-            "username": user,
+            "username": username,
             "password": hashedPwd
         });
 
         console.log(createdUser);
         
-        res.status(201).json({ 'success': `${user} has been created` })
+        res.status(201).json({ 'success': `${username} has been created` })
         
     } catch (error) {
         res.status(500).json({'message': error.message})

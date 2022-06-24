@@ -20,6 +20,8 @@ app.use('/auth', require('../routes/authRoute'))
 
 app.use('/employees', require('../routes/employeeRoutes'))
 app.use('/register', require('../routes/registerRoute'))
+app.use('/user', require('../routes/userRoute'))
+
 
 app.listen(process.env.PORT, (req, res) => {
     console.log(`server is running on port ${process.env.PORT}`);

@@ -1,10 +1,9 @@
-const Users = require('../model/EmployeesSchema')
 const jwt = require('jsonwebtoken')
 
 const verifyJWT = (req, res, next) => {
-    const authHeaders = req.headers.authorization
+    const authHeaders = req.headers.authorization || req.headers.Authorization
     if (!authHeaders?.startswith('Bearer'))
-        return res.status(401)
+        return res.sendStatus(401)
     const token = authHeaders.split('')[1]
     console.log(token);
 
@@ -14,10 +13,10 @@ const verifyJWT = (req, res, next) => {
         (err, decoded) => {
             if (err)
                 return res.sendStatus(403)
-            req.user = decoded.username
+            req.username = decoded.username
             next();
         }
-    )
+    );
 }
 
-module.exports = verifyJWT
+module.exports = verifyJWT;
