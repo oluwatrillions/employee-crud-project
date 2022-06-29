@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 dotenv.config({ path: '../config/.env' })
 const cookieParser = require('cookie-parser')
+const jwtAuth = require('../middleware/verifyJWT')
+
 
 const DBConn = require('../model/ConnectDB')
 
@@ -17,9 +19,11 @@ app.use(cors());
 app.use(cookieParser());
 
 app.use('/auth', require('../routes/authRoute'))
+app.use('/register', require('../routes/registerRoute'))
+
+app.use(jwtAuth)
 
 app.use('/employees', require('../routes/employeeRoutes'))
-app.use('/register', require('../routes/registerRoute'))
 app.use('/user', require('../routes/userRoute'))
 
 
