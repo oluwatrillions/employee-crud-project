@@ -59,8 +59,6 @@ const deleteEmployees = async (req, res) => {
         return res.status(400).json({ 'message': `no employee with id ${req.params.id}` })
     const deletedEmp = await deleteEmp.deleteOne();
     res.json({'message': 'employee has been deleted'})
-
-    res.json(deletedEmp)
 }
 
 const getEmployee = async (req, res) => {
