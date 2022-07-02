@@ -1,0 +1,70 @@
+*, div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    background: linear-gradient(to right, #33ccff 50%, #ff99cc 100%);
+    width: 70vw;
+    height: 100vh;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.App-section {
+    width: 30vw;
+    height: 30vh;
+    background-color:#cfdfe9;
+}
+
+input {
+    display: block;
+    width: 18em;
+    height: 3em;
+    color: grey;
+    font-size: 1em;
+    border: none;
+    background: #212b41;
+    color: rgb(255, 255, 255);
+    padding-left: 1em;
+}
+
+.input {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.imageBox {
+    width: 4em;
+    height: 3em;
+    background: #25385e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 15em;
+    height: 3em;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: .5em;
+    cursor: pointer;
+    color: whitesmoke;
+    background: #a2b4be;
+}
