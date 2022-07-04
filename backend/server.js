@@ -21,11 +21,10 @@ app.use(cookieParser());
 app.use('/auth', require('../routes/authRoute'))
 app.use('/register', require('../routes/registerRoute'))
 
-app.use('/employees', require('../routes/employeeRoutes'))
-
-
 app.use(jwtAuth)
 app.use('/user', require('../routes/userRoute'))
+app.use('/employees', require('../routes/employeeRoutes'))
+
 
 
 app.listen(process.env.PORT, (req, res) => {

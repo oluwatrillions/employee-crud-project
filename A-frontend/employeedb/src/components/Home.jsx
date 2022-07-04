@@ -7,13 +7,17 @@ const Home = () => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState();
 
-    const loginBtn = () => {
-        Axios.get("http:localhost:4000/employees", {
-            username: username,
-            password: password
+    const loginBtn = async () => {
+        try {
+            await Axios.get("http://localhost:4000/employees", {
+            user: username,
+            pwrd: password
         }).then()
             
        console.log(username, password);
+        } catch (error) {
+            console.log(error);
+        }
     };
     
     
