@@ -7,7 +7,6 @@ div {
 
 .home {
     background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-    width: 70vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -56,17 +55,25 @@ div {
 input {
     display: block;
     width: 15vw;
-    height: 5.5vh;
+    height: 4.15em;
     color: grey;
-    font-size: 1em;
+    font-size: 1vw;
     border: none;
     background: #212b41;
     color: rgb(255, 255, 255);
     padding-left: 1em;
+    outline: none;
 }
 
 .input {
     display: flex;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
 }
 
 .container {
@@ -80,8 +87,7 @@ input {
 
 .imageBox {
     width: 4em;
-    height: 3em;
-    padding: 1.38vw;
+    height: 3.3em;
     background: #25385e;
     display: flex;
     align-items: center;
@@ -103,9 +109,10 @@ button {
     background-color: #cfdfe9;
     border-radius: 0 0 1.5em 1.5em;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (min-width: 360px){
     div, * {
         margin: 0;
         padding: 0;
@@ -114,7 +121,6 @@ button {
     
 .home {
     background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-    width: 100vw;
     height: 100vh;
 }
 
@@ -126,219 +132,160 @@ button {
 .profileImg {
     position: absolute;
     top: 0;
+    width: 6em;
+    height: 6em;
 }
 
 .App-section {
-    width: 76vw;
+    width: 70vw !important;
     height: 30vh;
 }
 
 input {
+    width: 35vw;
     display: block;
-    width: 45vw;
-    height: 5.45vh;
-    font-size: 1.2em;
+    color: grey;
+    border: none;
+    font-size: .8em;
+    background: #212b41;
+    color: rgb(255, 255, 255);
+    padding-left: 1em;
 }
 
 .input {
     display: flex;
 }
 
+.imageBox {
+    width: 3em;
+    background: #25385e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
-    width: 15vw;
+    width: 30vw !important;
     height: 3.5em;
 }
-}
-
-@media screen and (max-width: 800px) {
-    .home {
-        background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-        width: 80vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    .signIn-section {
-        width: 80vw;
-        height: 45vh;
-    }
-
-    .profileImg {
-        position: absolute;
-        top: 1vh !important;
-        background: #212b41;
-        width: 7em !important;
-        height: 7em !important;
-    }
-
-    .App-section {
-        width: 70vw;
-        height: 30vh;
-    }
-
-    input {
-        width: 40vw;
-        height: 5.45vh;
-        display: block;    
-    }
-
-    .input {
-        display: flex;
-    }
-
-    .imageBox {
-        width: 4em !important;
-        height: 4em !important;
-    }
-
-    button {
-        width: 20vw !important;
-        font-size: 1em;
-    }
 
 }
 
-@media screen and (max-width: 1100px) {
-     .home {
-        width: 80vw;
-        background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-        height: 100vh;
+@media screen and (max-width: 640px){
+    div, * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    
+.home {
+    background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
+    height: 100vh;
+}
 
-    .signIn-section {
-        width: 80vw;
-        height: 45vh;
-    }
+.signIn-section {
+    width: 80vw;
+    height: 45vh;
+}
 
-    .profileImg {
-        position: absolute;
-        top: 1vh !important;
-        background: #212b41;
-        width: 8em ;
-        height: 8em ;
-    }
+.profileImg {
+    position: absolute;
+    top: 0;
+    width: 6em;
+    height: 6em;
+}
 
-    .App-section {
-        width: 65vw;
-        height: 30vh;
-    }
+.App-section {
+    width: 50vw;
+    height: 30vh;
+}
 
-    input {
-        width: 35vw;
-        height: 5.45vh;
-        display: block;
-    }
+input {
+    width: 35vw;
+    display: block;
+    color: grey;
+    border: none;
+    font-size: .8em;
+    background: #212b41;
+    color: rgb(255, 255, 255);
+    padding-left: 1em;
+}
 
-    .input {
-        display: flex;
-    }
+.input {
+    display: flex;
+}
 
-    .imageBox {
-        width: 4em !important;
-        height: 4em !important;
-    }
+.imageBox {
+    width: 3em;
+    background: #25385e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    button {
-        width: 20vw;
-        font-size: 1em;
-    }
+button {
+    width: 30vw !important;
+    height: 3.5em;
+}
 
 }
 
-@media screen and (max-width: 1400px) {
-    .home {
-        width: 80vw;
-        background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-        height: 100vh;
-    }
 
-    .signIn-section {
-        width: 80vw;
-        height: 45vh;
+@media screen and (min-width: 641px){
+    div, * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-
-    .profileImg {
-        position: absolute;
-        top: 1vh !important;
-        background: #212b41;
-        width: 8em;
-        height: 8em;
-    }
-
-    .App-section {
-        width: 50vw;
-        height: 30vh;
-    }
-
-    input {
-        width: 28vw;
-        height: 5.45vh;
-        display: block;
-    }
-
-    .input {
-        display: flex;
-    }
-
-    .imageBox {
-        width: 4em !important;
-        height: 4em !important;
-    }
-
-    button {
-        width: 20vw;
-        font-size: 1em;
-    }
-
+    
+.home {
+    background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
+    height: 100vh;
 }
 
-@media screen and (max-width: 1700px) {
-    .home {
-        width: 70vw;
-        background: linear-gradient(to right, #33ccff 0, #ff99cc 100%);
-        height: 100vh;
-    }
+.signIn-section {
+    width: 80vw;
+    height: 45vh;
+}
 
-    .signIn-section {
-        width: 80vw;
-        height: 45vh;
-    }
+.profileImg {
+    position: absolute;
+    top: 0;
+    width: 6em;
+    height: 6em;
+}
 
-    .profileImg {
-        position: absolute;
-        top: 0;
-        background: #212b41;
-        width: 8em;
-        height: 8em;
-    }
+.App-section {
+    width: 33em !important;
+    height: 30vh;
+}
 
-    .App-section {
-        width: 40vw;
-        height: 30vh;
-    }
+input {
+    width: 22em;
+    display: block;
+    color: grey;
+    border: none;
+    font-size: .8em;
+    background: #212b41;
+    color: rgb(255, 255, 255);
+    padding-left: 1em;
+}
 
-    input {
-        width: 20vw;
-        height: 5.45vh;
-        display: block;
-    }
+.input {
+    display: flex;
+}
 
-    .input {
-        display: flex;
-    }
+.imageBox {
+    width: 3em;
+    background: #25385e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .imageBox {
-        width: 4em !important;
-        height: 4em !important;
-    }
-
-    button {
-        width: 20vw;
-        font-size: 1em;
-    }
+button {
+    max-width: 22em !important;
+    height: 3.5em;
+}
 
 }

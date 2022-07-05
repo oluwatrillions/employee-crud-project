@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './Home.css'
 import Axios from 'axios'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
 
@@ -9,12 +10,13 @@ const Home = () => {
 
     const loginBtn = async () => {
         try {
-            await Axios.get("http://localhost:4000/employees", {
+           const userInfo =  await Axios.get("http://localhost:4000/employees", {
             user: username,
             pwrd: password
         }).then()
-            
-       console.log(username, password);
+            console.log(userInfo);
+            setUsername("")
+            setPassword("")
         } catch (error) {
             console.log(error);
         }
@@ -39,11 +41,12 @@ const Home = () => {
                             </div>
                             <input type="password" name="password" placeholder="Password" onChange={(e)=> setPassword(e.target.value)}/>
                         </div>
-                    </div>
+                  </div>
+                  <h4 className="signUp">Not a User? <span><Link to="register">Sign Up</Link></span></h4>
                 </section>
               <button onClick={loginBtn}>LOGIN</button>
             </div> 
-    </div>
+        </div>
   )
 }
 
