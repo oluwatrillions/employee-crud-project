@@ -41,6 +41,14 @@ input {
     outline: none;
 }
 
+.errMsg {
+    color: red;
+}
+
+.noErrMsg {
+
+}
+
 button {
     width: 15vw;
     height: 3.5em;

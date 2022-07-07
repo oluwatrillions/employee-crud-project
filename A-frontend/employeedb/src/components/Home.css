@@ -57,7 +57,7 @@ input {
     width: 15vw;
     height: 4.15em;
     color: grey;
-    font-size: 1vw;
+    font-size: 1vh;
     border: none;
     background: #212b41;
     color: rgb(255, 255, 255);
@@ -72,9 +72,14 @@ input {
 .signUp {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-end;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 .container {
     display: flex;
@@ -92,6 +97,14 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.errMsg {
+    color: red;
+}
+
+.noErrMsg {
+    
 }
 
 button {
